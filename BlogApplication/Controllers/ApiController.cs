@@ -18,7 +18,7 @@ namespace BlogApplication.Controllers
             _dbContext = dbContext;
         }
 
-        [HttpGet("GetUsers")]
+        [HttpGet("users")]
         public IActionResult Get()
         {
             try

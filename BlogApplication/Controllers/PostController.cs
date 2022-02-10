@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace BlogApplication.Controllers
 {
-    [Authorize]
+
     public class PostController : Controller
     {
         private readonly PostDbContext _context;
@@ -48,6 +48,7 @@ namespace BlogApplication.Controllers
         }
 
         // GET: Post/Create
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -71,6 +72,7 @@ namespace BlogApplication.Controllers
         }
 
         // GET: Post/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -122,6 +124,7 @@ namespace BlogApplication.Controllers
         }
 
         // GET: Post/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
